@@ -1,0 +1,488 @@
+
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body
+{
+    background: #1e1d2b;
+    font-family: 'Poppins', sans-serif;
+}
+
+header
+{
+    width: 100%;
+    height: 80px;
+    background: #1e1d2b;
+    position: fixed;
+    z-index: 10;
+}
+
+.nav
+{
+    width: 90%;
+    /* background-color: aqua; */
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1
+{
+    color: #ff702a;
+    font-size: 37px;
+    cursor: pointer;
+}
+
+.navegar ul li
+{
+    list-style: none;
+    display: inline-block;
+}
+
+.navegar ul li a:hover
+{
+    background: #ffa77b;
+    transition: 500ms ease;
+    box-shadow: 0px 0px 10px #ffa77b;
+    color: #000;
+}
+
+.navegar a
+{
+    text-decoration: none;
+    padding: 10px;
+    transition: 500ms ease;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.home,
+.about,
+.food_menu,
+.services
+{
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    height: 85vh;
+    /* top: 60px; */
+}
+
+.contenedor_home,
+.contenedor_about,
+.contenedor_food_menu,
+.contenedor_services,
+.contenedor_footer
+{
+    width: 90%;
+    height: 100%;
+    /* background: whitesmoke; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.imagen_home,
+.imagen_about
+{
+    width: 500px;
+}
+
+.imagen_home img,
+.imagen_about img
+{
+    width: 100%;
+}
+
+.info_home h1
+{
+    color: #ff702a;
+    font-size: 90px;
+    margin-bottom: 5px;
+}
+
+.info_home p
+{
+    color: #fff;
+    font-size: 30px;
+    /* margin-bottom: 25px; */
+}
+
+.info_home a,
+.info_about a,
+.info_quality_food a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background: #ff702a;
+    font-size: 18px;
+    transition: 500ms ease;
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.info_home a:hover,
+.info_about a:hover,
+.info_quality_food a:hover
+{
+    background: #ffa77b;
+    transition: 500ms ease;
+    box-shadow: 0px 0px 10px #ffa77b;
+    color: #000;
+    font-weight: 600;
+}
+
+.info_about p
+{
+    color: #fff;
+    font-size: 22px;
+}
+
+.info_about h1,
+.info_food_menu h1,
+.info_services h1
+{
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+
+.info_about h3,
+.info_food_menu h3,
+.info_services h3
+{
+    color: #ff702a;
+}
+
+.contenedor_food_menu,
+.contenedor_services
+{
+    text-align: center;
+    flex-direction: column;
+}
+
+.opcines_food_menu,
+.opcines_services
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.opcines_food_menu div
+{
+    width: 380px;
+    height: 380px;
+    background: #ffefe8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    top: -50px;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+.opcines_food_menu div:hover
+{
+    background: #ffa77b;
+    transition: 500ms ease;
+    box-shadow: 0px 0px 10px #ffa77b;
+}
+
+.opcines_food_menu div img,
+.opcines_services div img
+{
+    width: 60%;
+}
+
+.opcines_food_menu div p,
+.opcines_services div h2
+{
+    color: #ff702a;
+}
+
+.opcines_food_menu div:hover p
+{
+    color: #000;
+}
+
+.opcines_services div
+{
+    width: 380px;
+    height: 380px;
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    position: relative;
+    top: -50px;
+    transition: 500ms ease;
+}
+
+.opcines_services div p
+{
+    color: #fff;
+    font-size: 20px;
+}
+
+.quality_food
+{
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    height: 55vh;
+    /* top: 60px; */
+}
+
+.contenedor_quality_food
+{
+    width: 90%;
+    height: 100%;
+    /* background: whitesmoke; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.info_quality_food 
+{
+    background: #ffefe8;
+    width: 90%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info_quality_food h1
+{
+    font-size: 60px;
+}
+
+
+
+
+footer
+{
+    width: 100%;
+    height: 40vh;
+    /* background: whitesmoke; */
+    position: relative;
+}
+
+.contenedor_footer hr
+{
+    width: 40%;
+    border-color: #ff702a;
+}
+
+.contenedor_footer h2
+{  
+    color: #fff;
+}
+
+.contenedor_footer ul
+{
+    margin-top: 30px;
+    color: #fff;
+    list-style: none;
+}
+
+.contenedor_footer a
+{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    transition: 500ms ease;
+}
+
+.contenedor_footer a:hover
+{
+    padding-left: 2px;
+    font-weight: 600;
+    transition: 500ms ease;
+}
+
+.menu_link,
+.our_servive,
+.information,
+.contant_us
+{
+    height: 200px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media (max-width: 1500px) {
+    .opcines_food_menu div,
+    .opcines_services div
+    {
+        width: 320px;
+        height: 320px;
+        top: -100px;
+    }
+    .info_services
+    {
+        margin-bottom: 90px;
+    }
+    .imagen_home img,
+    .imagen_about img
+    {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1400px) {
+    .opcines_food_menu div,
+    .opcines_services div
+    {
+        width: 280px;
+        height: 280px;
+    }
+    .imagen_home img,
+    .imagen_about img
+    {
+        width: 70%;
+    }
+    .contenedor_home,
+    .contenedor_about,
+    .contenedor_food_menu,
+    .contenedor_services,
+    .contenedor_footer
+    {
+        width: 95%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .opcines_food_menu div,
+    .opcines_services div
+    {
+        width: 370px;
+        height: 370px;
+    }
+    .opcines_food_menu,
+    .opcines_services
+    {
+        flex-direction: column;
+    }
+    .food_menu,
+    .services
+    {
+        width: 100%;
+        /* background-color: aqua; */
+        position: relative;
+        height: 1750px;
+        /* top: 60px; */
+    }
+}
+
+@media (max-width: 950px) {
+    .contenedor_home,
+    .contenedor_food_menu,
+    .contenedor_services
+    {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .home,
+    .about
+    {
+        width: 100%;
+        /* background-color: aqua; */
+        position: relative;
+        height: 1000px;
+        /* top: 60px; */
+    }
+    .contenedor_about
+    {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+@media (max-width: 860px) {
+    footer
+    {
+        height: 900px;
+    }
+    .contenedor_footer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor_quality_food h1
+    {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 860px) {
+    .contenedor_home,
+    .contenedor_about,
+    .contenedor_food_menu,
+    .contenedor_services,
+    .contenedor_footer
+    {
+        width: 100%;
+    }
+    .info_home h1
+    {
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+    .info_about h1,
+    .info_food_menu h1,
+    .info_services h1
+    {
+        font-size: 30px;
+        margin-bottom: 0px;
+    }
+    .info_home p,
+    .info_about p
+    {
+        font-size: 20px;
+    }
+    .info_home a,
+    .info_about a,
+    .info_quality_food a
+    {
+        font-size: 15px;
+    }
+}
