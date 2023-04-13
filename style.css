@@ -366,13 +366,17 @@ footer
     justify-content: flex-start;
 }
 
+
+
+
+
 @media (max-width: 1500px) {
     .opcines_food_menu div,
     .opcines_services div
     {
         width: 320px;
         height: 320px;
-        top: -100px;
+        /* top: -100px; */
     }
     .imagen_home img,
     .imagen_about img
@@ -405,6 +409,13 @@ footer
 }
 
 @media (max-width: 1100px) {
+    .contenedor_food_menu,
+    .contenedor_services
+    {   
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     .opcines_food_menu div,
     .opcines_services div
     {
@@ -453,22 +464,6 @@ footer
 }
 
 @media (max-width: 860px) {
-    footer
-    {
-        height: 900px;
-    }
-    .contenedor_footer
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    .contenedor_quality_food h1
-    {
-        font-size: 45px;
-    }
-}
-
-@media (max-width: 860px) {
     .contenedor_home,
     .contenedor_about,
     .contenedor_food_menu,
@@ -499,5 +494,18 @@ footer
     .info_quality_food a
     {
         font-size: 15px;
+    }
+    footer
+    {
+        height: 900px;
+    }
+    .contenedor_footer
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .contenedor_quality_food h1
+    {
+        font-size: 45px;
     }
 }
