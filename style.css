@@ -4,12 +4,19 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root
+{
+    --color_hover: #ffa77b;
+    --box-shadow_hover: 0px 0px 10px #ffa77b;
+    --color_texto: #fff;
 }
 
 body
 {
     background: #1e1d2b;
-    font-family: 'Poppins', sans-serif;
 }
 
 header
@@ -52,9 +59,9 @@ header
 
 .navegar ul li a:hover
 {
-    background: #ffa77b;
+    background: var(--color_hover);
     transition: 500ms ease;
-    box-shadow: 0px 0px 10px #ffa77b;
+    box-shadow: var(--box-shadow_hover);
     color: #000;
 }
 
@@ -63,7 +70,7 @@ header
     text-decoration: none;
     padding: 10px;
     transition: 500ms ease;
-    color: #fff;
+    color: var(--color_texto);
     cursor: pointer;
 }
 
@@ -76,7 +83,7 @@ header
     width: 100%;
     /* background-color: aqua; */
     position: relative;
-    height: 85vh;
+    height: 100vh;
     /* top: 60px; */
 }
 
@@ -121,7 +128,7 @@ header
 
 .info_home p
 {
-    color: #fff;
+    color: var(--color_texto);
     font-size: 30px;
     /* margin-bottom: 25px; */
 }
@@ -144,11 +151,11 @@ header
 .info_about a:hover,
 .info_quality_food a:hover
 {
-    background: #ffa77b;
+    background: var(--color_hover);
     transition: 500ms ease;
-    box-shadow: 0px 0px 10px #ffa77b;
+    box-shadow: var(--box-shadow_hover);
     color: #000;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 
 .info_about p
@@ -289,6 +296,7 @@ header
 .info_quality_food h1
 {
     font-size: 60px;
+    line-height: 1;
 }
 
 
