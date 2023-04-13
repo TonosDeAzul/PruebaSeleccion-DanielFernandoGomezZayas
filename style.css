@@ -12,7 +12,11 @@
     --color_hover: #ffa77b;
     --box-shadow_hover: 0px 0px 10px #ffa77b;
     --color_texto: #fff;
+    --border-radius: 7px;
+    --transition: 400ms ease;
 }
+
+
 
 body
 {
@@ -60,16 +64,17 @@ header
 .navegar ul li a:hover
 {
     background: var(--color_hover);
-    transition: 500ms ease;
+    transition: var(--transition);
     box-shadow: var(--box-shadow_hover);
     color: #000;
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .navegar a
 {
     text-decoration: none;
     padding: 10px;
-    transition: 500ms ease;
+    transition: var(--transition);
     color: var(--color_texto);
     cursor: pointer;
 }
@@ -142,7 +147,7 @@ header
     padding: 10px;
     background: #ff702a;
     font-size: 18px;
-    transition: 500ms ease;
+    transition: var(--transition);
     margin-top: 25px;
     display: inline-block;
 }
@@ -152,15 +157,16 @@ header
 .info_quality_food a:hover
 {
     background: var(--color_hover);
-    transition: 500ms ease;
+    transition: var(--transition);
     box-shadow: var(--box-shadow_hover);
     color: #000;
+    border-bottom-right-radius: var(--border-radius);
     /* font-weight: 600; */
 }
 
 .info_about p
 {
-    color: #fff;
+    color: var(--color_texto);
     font-size: 22px;
 }
 
@@ -168,9 +174,10 @@ header
 .info_food_menu h1,
 .info_services h1
 {
-    color: #fff;
+    color: var(--color_texto);
     font-size: 50px;
     margin-bottom: 5px;
+    line-height: 1;
 }
 
 .info_about h3,
@@ -178,11 +185,13 @@ header
 .info_services h3
 {
     color: #ff702a;
+    line-height: 1;
 }
 
 .contenedor_food_menu,
 .contenedor_services
 {
+    display: flex;
     text-align: center;
     flex-direction: column;
 }
@@ -193,6 +202,7 @@ header
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    gap: 40px;
 }
 
 .opcines_food_menu div
@@ -204,18 +214,19 @@ header
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
+    /* margin: 10px;
     position: relative;
-    top: -50px;
-    transition: 500ms ease;
+    top: -50px; */
+    transition: var(--transition);
     cursor: pointer;
 }
 
 .opcines_food_menu div:hover
 {
-    background: #ffa77b;
-    transition: 500ms ease;
-    box-shadow: 0px 0px 10px #ffa77b;
+    background: var(--color_hover);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow_hover);
+    border-bottom-right-radius: var(--border-radius);
 }
 
 .opcines_food_menu div img,
@@ -244,16 +255,16 @@ header
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px;
-    position: relative;
-    top: -50px;
-    transition: 500ms ease;
+    /* margin: 30px; */
+    /* position: relative;
+    top: -50px; */
+    transition: var(--transition);
 }
 
 .opcines_services div p
 {
-    color: #fff;
-    font-size: 20px;
+    color: var(--color_texto);
+    font-size: 18px;
 }
 
 .quality_food
@@ -318,29 +329,29 @@ footer
 
 .contenedor_footer h2
 {  
-    color: #fff;
+    color: var(--color_texto);
 }
 
 .contenedor_footer ul
 {
     margin-top: 30px;
-    color: #fff;
+    color: var(--color_texto);
     list-style: none;
 }
 
 .contenedor_footer a
 {
-    color: #fff;
+    color: var(--color_texto);
     text-decoration: none;
     display: inline-block;
-    transition: 500ms ease;
+    transition: var(--transition);
 }
 
 .contenedor_footer a:hover
 {
     padding-left: 2px;
     font-weight: 600;
-    transition: 500ms ease;
+    transition: var(--transition);
 }
 
 .menu_link,
@@ -362,10 +373,6 @@ footer
         width: 320px;
         height: 320px;
         top: -100px;
-    }
-    .info_services
-    {
-        margin-bottom: 90px;
     }
     .imagen_home img,
     .imagen_about img
