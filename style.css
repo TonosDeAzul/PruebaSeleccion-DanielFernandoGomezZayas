@@ -55,6 +55,21 @@ header
     cursor: pointer;
 }
 
+.navegar2
+{
+    display: none;
+    font-size: 35px;
+    color: var(--color_texto);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.despegable_menu ul li
+{
+    list-style: none;
+    display: block;
+}
+
 .navegar ul li
 {
     list-style: none;
@@ -507,5 +522,22 @@ footer
     .contenedor_quality_food h1
     {
         font-size: 45px;
+    }
+}
+
+@media (max-width: 700px) {
+    .navegar ul
+    {
+        display: none;
+    }
+    .navegar2
+    {
+        display: block;
+    }
+    .navegar2:hover
+    {
+        display: block  ;
+        color: var(--color_hover);
+        transition: var(--transition);
     }
 }
