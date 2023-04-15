@@ -1,3 +1,10 @@
+/* Animación */
+html
+{
+    scroll-behavior: smooth;
+}
+
+
 /* Selector universal */
 *
 {
@@ -88,6 +95,7 @@ header
 }
 .icon a
 {
+    transition: var(--transition);
     color: var(--color_texto);
     font-size: 30px;
     cursor: pointer;
@@ -537,7 +545,7 @@ footer
 .contant_us
 {
     height: 200px;
-    width: 180px;
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -733,5 +741,11 @@ footer
     .navegar_responsive:target
     {
     clip-path: circle(150% at top left);
+    }
+    .opcines_food_menu div,
+    .opcines_services div
+    {
+        width: 320px;
+        height: 320px;
     }
 }
