@@ -1,4 +1,4 @@
-
+/* Selector universal */
 *
 {
     margin: 0;
@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
+
+
+/* Variables  */
 :root
 {
     --color_hover: #ffa77b;
@@ -17,20 +21,26 @@
 }
 
 
+
+
+/* Cuerpo de la página */
 body
 {
     background: #1e1d2b;
 }
 
+
+
+
+/* Cabecera de la página */
 header
 {
     width: 100%;
     height: 80px;
-    background: #1e1d2b;
+    background: rgba(30, 29, 43, 0.99);
     position: fixed;
     z-index: 10;
 }
-
 /* .nav_responsive-ul
 {
     display: none;
@@ -64,11 +74,9 @@ header
     z-index: 1;
     background: #ffa77b;
 } */
-
 .nav
 {
     width: 90%;
-    /* background-color: aqua; */
     height: 40px;
     position: absolute;
     top: 0;
@@ -80,29 +88,17 @@ header
     align-items: center;
     justify-content: space-between;
 }
-
 .logo h1
 {
     color: #ff702a;
     font-size: 37px;
     cursor: pointer;
 }
-
-
-nav
-{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-}
-
 .navegar ul li
 {
     list-style: none;
     display: inline-block;
 }
-
 .navegar ul li a:hover
 {
     background: var(--color_hover);
@@ -111,7 +107,6 @@ nav
     color: #000;
     border-bottom-right-radius: var(--border-radius);
 }
-
 .navegar a
 {
     text-decoration: none;
@@ -122,27 +117,19 @@ nav
 }
 
 
-.home,
-.about,
-.food_menu,
-.services
+
+
+/* Sección Home */
+.home
 {
     width: 100%;
-    /* background-color: aqua; */
     position: relative;
     height: 100vh;
-    /* top: 60px; */
 }
-
-.contenedor_home,
-.contenedor_about,
-.contenedor_food_menu,
-.contenedor_services,
-.contenedor_footer
+.contenedor_home
 {
     width: 90%;
     height: 100%;
-    /* background: whitesmoke; */
     position: absolute;
     top: 0;
     left: 0;
@@ -153,36 +140,49 @@ nav
     align-items: center;
     justify-content: space-evenly;
 }
-
-.imagen_home,
+.imagen_home
+{
+    width: 500px;
+}
 .imagen_about
 {
     width: 500px;
 }
-
-.imagen_home img,
-.imagen_about img
+.imagen_home img
 {
     width: 100%;
 }
-
 .info_home h1
 {
     color: #ff702a;
     font-size: 90px;
     margin-bottom: 5px;
 }
-
 .info_home p
 {
     color: var(--color_texto);
     font-size: 30px;
-    /* margin-bottom: 25px; */
 }
-
-.info_home a,
-.info_about a,
-.info_quality_food a
+.info_home a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background: #ff702a;
+    font-size: 18px;
+    transition: var(--transition);
+    margin-top: 25px;
+    display: inline-block;
+}
+.info_home a:hover
+{
+    background: var(--color_hover);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow_hover);
+    color: #000;
+    border-bottom-right-radius: var(--border-radius);
+}
+.info_about a
 {
     text-decoration: none;
     color: #fff;
@@ -194,59 +194,103 @@ nav
     display: inline-block;
 }
 
-.info_home a:hover,
-.info_about a:hover,
-.info_quality_food a:hover
+.info_about a:hover
 {
     background: var(--color_hover);
     transition: var(--transition);
     box-shadow: var(--box-shadow_hover);
     color: #000;
     border-bottom-right-radius: var(--border-radius);
-    /* font-weight: 600; */
 }
 
+
+
+
+
+/* Sección About */
+.about
+{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+.contenedor_about
+{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.imagen_about img
+{
+    width: 100%;
+}
 .info_about p
 {
     color: var(--color_texto);
     font-size: 22px;
 }
-
-.info_about h1,
-.info_food_menu h1,
-.info_services h1
+.info_about h1
 {
     color: var(--color_texto);
     font-size: 50px;
     margin-bottom: 5px;
     line-height: 1;
 }
-
-.info_about h3,
-.info_food_menu h3,
-.info_services h3
+.info_about h3
 {
     color: #ff702a;
     line-height: 1;
 }
 
-.contenedor_food_menu,
-.contenedor_services
+
+
+
+/* Sección Food Menu */
+.food_menu
+{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+.contenedor_food_menu
+{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contenedor_food_menu
 {
     display: flex;
     text-align: center;
     flex-direction: column;
 }
-
-.opcines_food_menu,
-.opcines_services
+.opcines_food_menu
 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 40px;
 }
-
+.opcines_food_menu div img
+{
+    width: 60%;
+}
 .opcines_food_menu div
 {
     width: 380px;
@@ -256,13 +300,9 @@ nav
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin: 10px;
-    position: relative;
-    top: -50px; */
     transition: var(--transition);
     cursor: pointer;
 }
-
 .opcines_food_menu div:hover
 {
     background: var(--color_hover);
@@ -270,59 +310,118 @@ nav
     box-shadow: var(--box-shadow_hover);
     border-bottom-right-radius: var(--border-radius);
 }
+.info_food_menu h1
+{
+    color: var(--color_texto);
+    font-size: 50px;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+.info_food_menu h3
+{
+    color: #ff702a;
+    line-height: 1;
+}
 
-.opcines_food_menu div img,
+
+
+
+
+/* Sección Servicios */
+.services
+{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+.contenedor_services
+{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .opcines_services div img
 {
     width: 60%;
 }
-
-.opcines_food_menu div p,
-.opcines_services div h2
+.opcines_food_menu div p
 {
     color: #ff702a;
 }
-
 .opcines_food_menu div:hover p
 {
     color: #000;
 }
-
 .opcines_services div
 {
     width: 380px;
     height: 380px;
-    /* background: #fff; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin: 30px; */
-    /* position: relative;
-    top: -50px; */
     transition: var(--transition);
 }
-
 .opcines_services div p
 {
     color: var(--color_texto);
     font-size: 18px;
 }
+.opcines_services div h2
+{
+    color: #ff702a;
+}
+.info_services h1
+{
+    color: var(--color_texto);
+    font-size: 50px;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+.info_services h3
+{
+    color: #ff702a;
+    line-height: 1;
+}
+.opcines_services
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+.contenedor_services
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
 
+
+
+
+
+/* Sección Comida de calidad */
 .quality_food
 {
     width: 100%;
-    /* background-color: aqua; */
     position: relative;
     height: 55vh;
     /* top: 60px; */
 }
-
 .contenedor_quality_food
 {
     width: 90%;
     height: 100%;
-    /* background: whitesmoke; */
     position: absolute;
     top: 0;
     left: 0;
@@ -334,7 +433,6 @@ nav
     justify-content: space-evenly;
     text-align: center;
 }
-
 .info_quality_food 
 {
     background: #ffefe8;
@@ -345,7 +443,25 @@ nav
     flex-direction: column;
     justify-content: center;
 }
-
+.info_quality_food a
+{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background: #ff702a;
+    font-size: 18px;
+    transition: var(--transition);
+    margin-top: 25px;
+    display: inline-block;
+}
+.info_quality_food a:hover
+{
+    background: var(--color_hover);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow_hover);
+    color: #000;
+    border-bottom-right-radius: var(--border-radius);
+}
 .info_quality_food h1
 {
     font-size: 60px;
@@ -355,32 +471,42 @@ nav
 
 
 
+/* Pie de página */
 footer
 {
     width: 100%;
     height: 40vh;
-    /* background: whitesmoke; */
     position: relative;
 }
-
+.contenedor_footer
+{
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .contenedor_footer hr
 {
     width: 40%;
     border-color: #ff702a;
 }
-
 .contenedor_footer h2
 {  
     color: var(--color_texto);
 }
-
 .contenedor_footer ul
 {
     margin-top: 30px;
     color: var(--color_texto);
     list-style: none;
 }
-
 .contenedor_footer a
 {
     color: var(--color_texto);
@@ -388,14 +514,12 @@ footer
     display: inline-block;
     transition: var(--transition);
 }
-
 .contenedor_footer a:hover
 {
     padding-left: 2px;
     font-weight: 600;
     transition: var(--transition);
 }
-
 .menu_link,
 .our_servive,
 .information,
@@ -411,7 +535,7 @@ footer
 
 
 
-
+/* Responsive */
 @media (max-width: 1500px) {
     .opcines_food_menu div,
     .opcines_services div
