@@ -62,6 +62,10 @@ header
     align-items: center;
     justify-content: space-between;
 }
+.logo
+{
+    z-index: 200;
+}
 .logo h1
 {
     color: #ff702a;
@@ -89,20 +93,66 @@ header
     color: var(--color_texto);
     cursor: pointer;
 }
-.icon
+.menu_responsive
+{   
+    display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+.check_menu
 {
     display: none;
 }
-.icon a
+.check_menu:checked~.check_open
 {
+    opacity: 0;
+}
+.check_menu:checked~.check_close
+{
+    opacity: 1;
+}
+.check_open
+{
+    position: absolute;
     transition: var(--transition);
     color: var(--color_texto);
     font-size: 30px;
     cursor: pointer;
+    line-height: 1px;
+    z-index: 200;
+}
+.check_close
+{
+    position: absolute;
+    transition: var(--transition);
+    color: var(--color_texto);
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1px;
+    opacity: 0;
+    z-index: 200;
+}
+.check_menu:checked~.navegar_responsive
+{
+    opacity: 1;
+    pointer-events: unset;
 }
 .navegar_responsive
 {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #1e1d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: var(--transition);
 }
 .navegar_responsive ul
 {
@@ -538,17 +588,15 @@ footer
     padding-left: 2px;
     font-weight: 600;
     transition: var(--transition);
+    letter-spacing: .1px;
 }
 .menu_link,
 .our_servive,
 .information,
-.contant_us
+.contact_us
 {
     height: 200px;
     width: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 
@@ -561,7 +609,6 @@ footer
     {
         width: 320px;
         height: 320px;
-        /* top: -100px; */
     }
     .imagen_home img,
     .imagen_about img
@@ -697,17 +744,13 @@ footer
 }
 
 @media (max-width: 690px) {
-    .navegar
-    {
-        display: none;
-    }
-    .icon
+    .menu_responsive
     {
         display: block;
     }
-    .icon a:hover
+    .navegar
     {
-        color: var(--color_hover);
+        display: none;
     }
     .imagen_home,
     .imagen_about
@@ -723,24 +766,6 @@ footer
     {
         text-align: center;
         flex-direction: column-reverse;
-    }
-    .navegar_responsive
-    {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 55px;
-    background: #1e1d2b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: circle(0% at top left);
-    transition: clip-path 400ms;
-    }
-    .navegar_responsive:target
-    {
-    clip-path: circle(150% at top left);
     }
     .opcines_food_menu div,
     .opcines_services div
